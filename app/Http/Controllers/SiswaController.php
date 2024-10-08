@@ -15,6 +15,13 @@ class SiswaController extends Controller
         return view('admin.siswa.index', compact('siswas'));
     }
 
+    public function indexFE()
+    {
+        $siswas = Siswa::get();
+
+        return view('index', compact('siswas'));
+    }
+
     public function createView()
     {
         return view('admin.siswa.create');

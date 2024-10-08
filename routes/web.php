@@ -3,6 +3,7 @@
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [SiswaController::class, 'indexFE']);
 Route::get('/admin/siswa', [SiswaController::class, 'index']);
 Route::delete('/admin/siswa', [SiswaController::class, 'deleteAll']);
 Route::post('/admin/siswa/tambah', [SiswaController::class, 'create']);
